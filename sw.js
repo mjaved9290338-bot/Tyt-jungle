@@ -1,6 +1,6 @@
 /* TYT Jungle — service worker (by Muhammad)
    Cache-first app shell: khulne par tez, aur ek dafa khul jaye to offline bhi chale. */
-var CACHE = 'tyt-jungle-v1';
+var CACHE = 'tyt-jungle-v2';
 var CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
